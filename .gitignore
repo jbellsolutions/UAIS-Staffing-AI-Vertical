@@ -1,0 +1,14 @@
+# Private business documents — DO NOT publish
+docs/research/business-plan.md
+docs/gtm/
+offer-packages/
+financial-model/
+docs/research/REVIEW-*.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
