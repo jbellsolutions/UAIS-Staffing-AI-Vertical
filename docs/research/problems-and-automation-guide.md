@@ -1,7 +1,7 @@
 # The Complete Staffing Agency Problem Map
 ## Every Pain Point, How It's Handled Today, and How to Automate It
 
-> **Purpose:** This is an open-source reference for building AI-powered automation solutions for staffing and recruiting agencies. Every problem identified here represents a buildable solution using Claude Code, AI agents, n8n workflows, Apify scrapers, cold email systems, and related tools.
+> **Purpose:** This is an open-source reference for building AI-powered automation solutions for staffing and recruiting agencies. Every problem identified here represents a buildable solution using **Claude Code** (primary build tool — custom agents and direct ATS API integrations), **OpenClaw** (autonomous 24/7 operations layer), **n8n** (orchestration — scheduling, cron jobs, monitoring), **Apify** scrapers, cold email systems, and related tools. The stack: Claude Code (builds it) + OpenClaw (runs it) + n8n (schedules it) + ATS APIs (connects it).
 >
 > **Industry Context:** The US staffing industry is a $198.7 billion market. 65% of agencies say client acquisition is their #1 challenge. 75% of employers globally struggle to find skilled talent. Recruiter burnout sits at 81%, with first-year turnover reaching 90% at many agencies. The opportunity to automate is massive.
 

@@ -9,7 +9,7 @@
 
 ## Overview
 
-A Claude-powered resume screening agent for staffing agencies. Processes resumes against job requirements, scores candidates on a configurable rubric, and outputs ranked shortlists. This is the single most-requested automation from staffing agencies and the first thing every AI Integrator builds.
+A Claude Code-built resume screening agent for staffing agencies. This is the first agent every AI Integrator builds using Claude Code — the primary tool in the UAIS stack. It processes resumes against job requirements, scores candidates on a configurable rubric, and outputs ranked shortlists directly into the agency's ATS via API. n8n handles the scheduling triggers and monitoring; Claude Code handles the intelligence and ATS integration.
 
 **What it replaces:** A recruiter spending 5-10 minutes per resume doing initial screening.
 **What it produces:** A scored, ranked shortlist with reasoning, ready for human review.

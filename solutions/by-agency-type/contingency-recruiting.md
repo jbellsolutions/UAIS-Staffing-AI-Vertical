@@ -55,7 +55,7 @@ AI automation addresses every one of these problems simultaneously.
 
 **Current State:** Recruiters send one or two follow-up emails and make a couple of calls. If no response, the candidate falls to the bottom of the pile. No systematic re-engagement.
 
-**AI Solution:** Multi-channel, multi-touch automated follow-up sequences. n8n workflows trigger personalized outreach via email, SMS, and LinkedIn at optimal intervals. Claude generates messages that reference the specific opportunity and the candidate's background, creating a personal feel at scale. Behavioral signals (email opens, LinkedIn profile views) are tracked to identify the best moment for the recruiter to make a personal call.
+**AI Solution:** Multi-channel, multi-touch automated follow-up sequences. Claude Code agents generate personalized outreach via email, SMS, and LinkedIn, with n8n handling scheduling and webhook triggers at optimal intervals. Claude generates messages that reference the specific opportunity and the candidate's background, creating a personal feel at scale. Behavioral signals (email opens, LinkedIn profile views) are tracked to identify the best moment for the recruiter to make a personal call.
 
 **Impact:** Candidate response rates increase from 15-20% to 45-60% through persistent, personalized multi-channel engagement.
 
@@ -67,7 +67,7 @@ AI automation addresses every one of these problems simultaneously.
 
 **Current State:** Database cleanup happens sporadically, if at all. Recruiters discover outdated records one at a time when they try to reach candidates and fail. There is no systematic enrichment process.
 
-**AI Solution:** Continuous automated enrichment pipeline. Apify actors scrape public professional profiles on a rolling schedule. n8n workflows compare scraped data against database records, flagging changes. Claude analyzes discrepancies and updates records. Bounced emails and disconnected phone numbers automatically trigger enrichment workflows.
+**AI Solution:** Continuous automated enrichment pipeline. Apify actors scrape public professional profiles on a rolling schedule. Claude Code agents compare scraped data against database records via direct ATS API access, flagging changes and updating records intelligently. n8n handles the scheduling and monitoring of enrichment runs. Bounced emails and disconnected phone numbers automatically trigger enrichment workflows.
 
 **Impact:** Database accuracy improves from 60-70% to 95%+, effectively increasing the usable candidate pool by 25-35% without sourcing a single new person.
 
@@ -115,7 +115,7 @@ AI automation addresses every one of these problems simultaneously.
 
 **Current State:** Follow-up depends entirely on individual recruiter discipline. There are no systematic reminders, no escalation paths, and no accountability. Important touch points fall through the cracks daily.
 
-**AI Solution:** n8n workflows monitor every active pipeline stage and trigger follow-up actions automatically. When a candidate is submitted, the system schedules recruiter reminders at day 1, 3, and 7. When a client goes silent, automated sequences re-engage with market data or new candidate profiles. When a placed candidate hits the 30-day mark, a satisfaction check-in fires automatically.
+**AI Solution:** Claude Code agents monitor every active pipeline stage via direct ATS API connections, with n8n orchestrating scheduled triggers and follow-up actions. When a candidate is submitted, the system schedules recruiter reminders at day 1, 3, and 7. When a client goes silent, automated sequences re-engage with market data or new candidate profiles. When a placed candidate hits the 30-day mark, a satisfaction check-in fires automatically.
 
 **Impact:** Follow-up compliance increases from 40-50% to 95%+. Pipeline velocity improves as deals stop stalling due to missed touch points.
 
@@ -151,7 +151,7 @@ AI automation addresses every one of these problems simultaneously.
 
 **Current State:** Recruiters spend 60% of their time on administrative tasks (data entry, email drafting, scheduling, ATS updates) and only 40% on revenue-generating activities (candidate conversations, client meetings, negotiating offers).
 
-**AI Solution:** AI handles the administrative burden. Automated ATS updates after every candidate interaction. Claude drafts emails, job descriptions, and candidate summaries. n8n workflows manage scheduling, reminders, and data hygiene. The recruiter's day is restructured so they spend 80% of their time on human-to-human interactions -- the part of the job that is both most valuable and most rewarding.
+**AI Solution:** AI handles the administrative burden. Claude Code agents automate ATS updates after every candidate interaction via direct API connections. Claude drafts emails, job descriptions, and candidate summaries. n8n orchestrates scheduling, reminders, and data hygiene workflows. The recruiter's day is restructured so they spend 80% of their time on human-to-human interactions -- the part of the job that is both most valuable and most rewarding.
 
 **Impact:** Recruiter admin time drops from 60% to 20%. Recruiter satisfaction and retention improve measurably. Each recruiter becomes 2x more productive without working longer hours, which further reduces burnout.
 
@@ -177,17 +177,20 @@ Before the 30-day clock starts, the AI Integrator conducts a discovery session:
 
 | Day | Activity | Deliverable |
 |-----|----------|-------------|
-| 1 | Install and configure n8n (self-hosted on agency's infrastructure or cloud VPS) | Running n8n instance with admin access |
-| 2 | Connect n8n to ATS via API (Bullhorn, Crelate, or JobAdder) | Bidirectional data flow confirmed |
-| 3 | Set up Claude API access, configure model routing (Haiku for screening, Sonnet for content) | API keys active, cost guardrails set |
+| 1 | Set up Claude Code environment and configure direct ATS API connections (Bullhorn, Crelate, or JobAdder) | Bidirectional data flow confirmed, Claude Code agents connecting to ATS |
+| 2 | Install and configure n8n for orchestration (self-hosted on agency's infrastructure or cloud VPS) | Running n8n instance for scheduling, cron jobs, and monitoring dashboards |
+| 3 | Configure Claude API model routing (Haiku for screening, Sonnet for content) and OpenClaw autonomous layer | API keys active, cost guardrails set, autonomous operations initialized |
 | 4 | Connect email system (SMTP/IMAP for candidate comms, Instantly for outreach) | Email sending/receiving verified |
 | 5 | Map top 10 workflows by time consumption and revenue impact | Prioritized automation roadmap |
 | 6 | Build and test Resume Screening Agent (v1) | Prototype screening 50 test resumes |
 | 7 | Review Week 1 results with agency leadership | Alignment on Week 2-4 priorities |
 
 **Key Technical Decisions:**
-- **n8n hosting:** Self-hosted (Docker) for data control, or n8n Cloud for simplicity
+- **Claude Code as primary tool:** All custom agents, direct ATS API integrations, and complex reasoning workflows are built in Claude Code — this is what makes UAIS different from every "n8n automation agency"
+- **n8n for orchestration:** Self-hosted (Docker) for scheduling, cron jobs, webhook triggers, and visual monitoring dashboards — not the main event, but essential infrastructure
+- **OpenClaw for autonomous operations:** Runs 24/7 on dedicated cloud infrastructure for Tier 2+ deployments
 - **Claude model selection:** Haiku for high-volume, low-complexity tasks (resume parsing, data enrichment); Sonnet for content generation and complex analysis
+- **ATS APIs as direct connectors:** Bullhorn, Lever, Greenhouse, JobAdder connected directly via Claude Code — no middleware needed
 - **Cost optimization:** Set per-workflow cost caps; Haiku costs ~$0.001 per resume screen vs. $0.01 for Sonnet
 
 ---
@@ -327,7 +330,7 @@ Flow:
 |-----|----------|-------------|
 | 22-23 | Analyze 2 weeks of production data; identify bottlenecks and failure points | Performance report with tuning recommendations |
 | 24-25 | Fine-tune Claude prompts based on real results (acceptance rates, false positives) | Optimized prompt library |
-| 26 | Build monitoring dashboard (n8n execution logs, cost tracking, KPI tracking) | Live operations dashboard |
+| 26 | Build monitoring dashboard (n8n orchestration logs, Claude Code agent performance, cost tracking, KPI tracking) | Live operations dashboard |
 | 27 | Team training session 1: Daily operations and troubleshooting | Recorded training + written guide |
 | 28 | Team training session 2: Customization and prompt engineering basics | Recorded training + prompt guide |
 | 29 | Complete documentation: System architecture, workflow specs, runbooks | Full documentation package |
@@ -368,7 +371,7 @@ Flow:
 
 Contingency agencies benefit most from the **Professional tier** because:
 
-1. **The Operations Hub is the core value driver.** Contingency recruiting is an operations-intensive business where speed and consistency determine revenue. The Professional tier's full Operations Hub (10+ automated workflows) directly addresses the speed-to-submit advantage that drives placement wins.
+1. **The Operations Hub (OpenClaw) is the core value driver.** Contingency recruiting is an operations-intensive business where speed and consistency determine revenue. The Professional tier's full Operations Hub — Claude Code agents running autonomously via OpenClaw, with n8n orchestration (10+ automated workflows) — directly addresses the speed-to-submit advantage that drives placement wins.
 
 2. **The volume justifies the investment.** At 2-4 placements per recruiter per month averaging $15,000 each, even one additional placement per month covers the cost many times over.
 
@@ -379,7 +382,7 @@ Contingency agencies benefit most from the **Professional tier** because:
 ### What is Included in Professional ($2,000)
 
 - Full 30-day deployment as described in this document
-- 10+ production n8n workflows
+- 10+ production Claude Code agents with n8n orchestration
 - Claude API configuration with cost-optimized model routing
 - Apify actor setup and configuration
 - Team training (2 recorded sessions + documentation)
@@ -450,22 +453,40 @@ The investment pays for itself if it generates even a fraction of one additional
 
 ## Tech Stack for Contingency Agencies
 
-### Applicant Tracking System (ATS)
+### The Stack: Claude Code (builds it) + OpenClaw (runs it) + n8n (schedules it) + ATS APIs (connects it)
 
-The ATS is the center of gravity. All automations connect to and through the ATS.
+### Applicant Tracking System (ATS) — CONNECTORS
 
-| ATS | Market Share | API Quality | n8n Integration | Notes |
-|-----|-------------|-------------|-----------------|-------|
-| **Bullhorn** | ~40% of contingency agencies | Excellent REST API | Native n8n node available | Industry standard; best integration support |
-| **Crelate** | Growing mid-market | Good REST API | Custom HTTP nodes in n8n | Strong for agencies with 5-25 recruiters |
-| **JobAdder** | Popular in APAC, growing in US | Good REST API | Custom HTTP nodes in n8n | Modern UI, good candidate experience |
-| **Vincere** | Mid-market | Adequate API | Custom HTTP nodes | Temp and perm combined workflows |
-| **PCRecruiter** | Legacy market | Limited API | Webhook-based integration | May require middleware |
+The ATS is the center of gravity. All automations connect to and through the ATS via direct API integration from Claude Code — no middleware layer needed.
 
-### Automation Platform
+| ATS | Market Share | API Quality | Claude Code Integration | Notes |
+|-----|-------------|-------------|------------------------|-------|
+| **Bullhorn** | ~40% of contingency agencies | Excellent REST API | Direct API via Claude Code agents | Industry standard; best integration support |
+| **Crelate** | Growing mid-market | Good REST API | Direct API via Claude Code agents | Strong for agencies with 5-25 recruiters |
+| **JobAdder** | Popular in APAC, growing in US | Good REST API | Direct API via Claude Code agents | Modern UI, good candidate experience |
+| **Vincere** | Mid-market | Adequate API | Direct API via Claude Code agents | Temp and perm combined workflows |
+| **PCRecruiter** | Legacy market | Limited API | Webhook-based integration via n8n | May require adapter layer |
 
-**n8n (self-hosted)** is the recommended automation backbone:
+### Primary Tool — CLAUDE CODE
 
+**Claude Code** is the AI Integrator's primary tool. This is what makes UAIS different from every "n8n automation agency":
+
+- **What it does:** Builds custom agents, direct API integrations, complex reasoning workflows. Connects directly to ATS APIs with no middleware.
+- **Why it matters:** Training someone on n8n is a weekend course. Training someone to build Claude Code agents for staffing workflows is a real certification with real value.
+- **Key capabilities:** Custom agent construction, direct ATS API integration, multi-step reasoning chains, document analysis, candidate evaluation with nuanced judgment
+
+### Autonomous Layer — OPENCLAW (Tier 2+)
+
+**OpenClaw** is the Operations Hub — runs 24/7 on dedicated cloud infrastructure:
+
+- **What it does:** Autonomous monitoring, continuous enrichment, proactive follow-up, real-time compliance tracking
+- **Key capabilities:** Always-on operations that don't require human triggers — the AI that never sleeps
+
+### Orchestration (Secondary) — n8n
+
+**n8n (self-hosted)** handles scheduling, monitoring, and orchestration:
+
+- **Role:** Scheduling, cron jobs, webhook triggers, visual monitoring dashboards. Not the main event — the infrastructure layer.
 - **Why n8n over Zapier/Make:** Self-hosted means no per-execution costs, no data leaving agency infrastructure, and no vendor lock-in. For a contingency agency processing thousands of candidates monthly, Zapier costs would be $500-2,000+/month versus $0-50 for self-hosted n8n.
 - **Hosting options:** Docker on a $20/month VPS (Hetzner, DigitalOcean) or on-premise
 - **Key capabilities:** Webhook triggers, HTTP request nodes, code nodes (JavaScript/Python), scheduling, error handling, sub-workflows
@@ -506,10 +527,10 @@ The ATS is the center of gravity. All automations connect to and through the ATS
 
 ### Monitoring and Analytics
 
-- **n8n execution logs:** Built-in monitoring of all workflow runs, errors, and performance
-- **Custom dashboard:** n8n workflow that aggregates KPIs and pushes to a simple web dashboard or Google Sheet
+- **n8n execution logs:** Built-in monitoring of all orchestration runs, errors, and performance
+- **Custom dashboard:** Claude Code-built dashboard that aggregates KPIs, with n8n handling scheduled data pulls
 - **Cost tracking:** Claude API usage monitoring via Anthropic dashboard; Apify usage via Apify console
-- **Alerting:** n8n error-handling nodes send Slack/email alerts when workflows fail
+- **Alerting:** n8n error-handling nodes and OpenClaw autonomous monitoring send Slack/email alerts when workflows fail
 
 ---
 
@@ -548,7 +569,7 @@ The ATS is the center of gravity. All automations connect to and through the ATS
 
 ### 90-Day Review Checklist
 
-- [ ] All 6+ core automations running in production with <2% error rate
+- [ ] All 6+ core Claude Code agents running in production with <2% error rate
 - [ ] Recruiter admin time reduced to <25% of workday (measured via time study)
 - [ ] Placements per recruiter increased by at least 50%
 - [ ] Client health scoring active with proactive outreach triggering for at-risk accounts

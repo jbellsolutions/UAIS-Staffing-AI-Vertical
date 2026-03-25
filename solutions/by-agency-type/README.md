@@ -7,7 +7,7 @@
 
 ## How to Use This Guide
 
-Every staffing agency operates under one (or more) of the business models below. The AI Integrator program deploys a tailored automation stack for each model, prioritizing the workflows that generate the fastest payback. Click through to the detailed deployment guide for each type.
+Every staffing agency operates under one (or more) of the business models below. The AI Integrator program deploys a tailored automation stack for each model — built with **Claude Code** (custom agents and direct API integrations), powered by **OpenClaw** (autonomous 24/7 operations), orchestrated through **n8n** (scheduling, monitoring, webhooks), and connected to **ATS APIs** (Bullhorn, Lever, Greenhouse, JobAdder) directly with no middleware. Click through to the detailed deployment guide for each type.
 
 ---
 
@@ -23,7 +23,7 @@ Every staffing agency operates under one (or more) of the business models below.
   3. Resume screening bottleneck -- 7-10 minutes per resume, hundreds per role
   4. Database staleness -- 30-40% of records become outdated within 12 months
   5. Client acquisition -- 53% of agencies say connecting with decision-makers is their top challenge
-- **AI Integrator 30-Day Focus:** Resume screening agent (Claude API + ATS integration), candidate sourcing pipeline (Apify + n8n + scoring), automated follow-up sequences, cold outreach engine for business development.
+- **AI Integrator 30-Day Focus:** Resume screening agent (Claude Code agent + direct ATS API integration), candidate sourcing pipeline (Claude Code + Apify + n8n orchestration), automated follow-up sequences, cold outreach engine for business development.
 - **Recommended Tier:** Professional ($2,000)
 - **Expected ROI:** 13x in month 1. Two additional placements per recruiter per month at $15,000 average fee = $30,000 incremental revenue against $2,300 first-month cost.
 
@@ -39,7 +39,7 @@ Every staffing agency operates under one (or more) of the business models below.
   3. Candidate assessment quality -- clients expect psychometric-grade evaluations
   4. Status reporting burden -- weekly or biweekly detailed progress reports to clients
   5. Limited throughput -- each recruiter manages only 3-5 active searches simultaneously
-- **AI Integrator 30-Day Focus:** Market mapping automation (Apify + Claude research synthesis), candidate assessment report generation, automated status report compilation from ATS data, talent pipeline intelligence dashboards.
+- **AI Integrator 30-Day Focus:** Market mapping automation (Claude Code agents + Apify research synthesis), candidate assessment report generation, automated status report compilation from ATS data, talent pipeline intelligence dashboards.
 - **Recommended Tier:** Professional ($2,000)
 - **Expected ROI:** 8x in first quarter. Reduced research time by 60% allows each partner to manage 2-3 additional concurrent searches. At $50,000+ average fee, one additional completed search per quarter per partner pays for the system many times over.
 
@@ -289,9 +289,9 @@ Every staffing agency operates under one (or more) of the business models below.
 
 | Tier | Price | Best For | Includes |
 |------|-------|----------|----------|
-| **Starter** | $1,000 | Temp-to-Perm, Direct Hire, Payrolling/EOR, Outplacement | Core automation setup, 3 workflows, basic training |
-| **Professional** | $2,000 | Contingency, Retained Search, Exec Search, SOW, Niche/Boutique, Offshore/Nearshore | Full Operations Hub, 10+ workflows, 30-day deployment |
-| **Enterprise** | $5,000 | RPO, Temp/Contract, MSP, Gig Platforms, Hybrid, HR Tech, Marketplace | Multi-system integration, custom dashboards, advanced AI features, dedicated support, 90-day deployment (30-day build + 60-day optimization) |
+| **Starter** | $1,000 | Temp-to-Perm, Direct Hire, Payrolling/EOR, Outplacement | Core Claude Code agents, 3 automated workflows, basic training |
+| **Professional** | $2,000 | Contingency, Retained Search, Exec Search, SOW, Niche/Boutique, Offshore/Nearshore | Full Operations Hub (OpenClaw), 10+ Claude Code agents with n8n orchestration, 30-day deployment |
+| **Enterprise** | $5,000 | RPO, Temp/Contract, MSP, Gig Platforms, Hybrid, HR Tech, Marketplace | Multi-system integration via direct ATS APIs, custom dashboards, advanced Claude Code agents, OpenClaw autonomous operations, dedicated support, 90-day deployment (30-day build + 60-day optimization) |
 
 ---
 

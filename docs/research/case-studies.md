@@ -1,7 +1,7 @@
 # UAIS Case Studies — Staffing & Recruiting Agencies
 
 ## Overview
-These are real results from UAIS AI Integrator placements into staffing and recruiting agencies. Each case follows the same model: one AI Integrator placed into the agency, trained on their specific workflows, building custom automation using Claude Code and supporting tools.
+These are real results from UAIS AI Integrator placements into staffing and recruiting agencies. Each case follows the same model: one AI Integrator placed into the agency, trained on their specific workflows, building custom automation using **Claude Code** as the primary tool — with **OpenClaw** for autonomous 24/7 operations, **n8n** for orchestration and scheduling, and **direct ATS API connections** (no middleware).
 
 ## Case Study 1: Mid-Size Contingency Agency (IT Staffing)
 **Agency Profile:** 15 recruiters, IT/tech staffing, Bullhorn ATS
@@ -70,14 +70,14 @@ Every agency we work with sees the same core results:
 6. **2x productivity** measured by placements, submittals, or revenue per recruiter
 
 ## The Common Automations Built
-Across all staffing agency placements, these are the automations our AI Integrators build most frequently:
-1. Resume screening and scoring (Claude Code agent)
-2. Candidate follow-up sequences (automated email + SMS)
-3. Interview scheduling automation
-4. Client outreach personalization (cold email with AI research)
-5. Credential/compliance monitoring
-6. CRM/ATS data entry automation
-7. Daily recruiter briefings and task prioritization
-8. Market intelligence and salary benchmarking
-9. Client health scoring and churn prediction
-10. Reporting and analytics dashboards
+Across all staffing agency placements, these are the automations our AI Integrators build most frequently — all using **Claude Code** as the primary build tool, with **n8n** for scheduling/orchestration and **direct ATS API connections**:
+1. Resume screening and scoring (Claude Code agent with direct ATS API integration)
+2. Candidate follow-up sequences (Claude Code + n8n orchestration for email + SMS)
+3. Interview scheduling automation (Claude Code agent)
+4. Client outreach personalization (Claude Code-powered cold email with AI research)
+5. Credential/compliance monitoring (OpenClaw autonomous layer for 24/7 tracking)
+6. CRM/ATS data entry automation (Claude Code direct API integration — no middleware)
+7. Daily recruiter briefings and task prioritization (Claude Code agent)
+8. Market intelligence and salary benchmarking (Claude Code + Apify)
+9. Client health scoring and churn prediction (Claude Code agent with OpenClaw monitoring)
+10. Reporting and analytics dashboards (Claude Code-built, n8n-scheduled data pulls)

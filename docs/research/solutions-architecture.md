@@ -36,7 +36,7 @@
 
 Staffing and recruiting agencies operate in an industry where margins are thin (typically 15–25% for contract placements), speed determines revenue, and manual processes consume 60–70% of a recruiter's day. The average time-to-fill has climbed to 44 days, while candidate ghosting rates exceed 40% and client churn hovers around 20–30% annually.
 
-This open-source suite provides **10 AI-powered agents** orchestrated through **n8n workflows** that automate the highest-impact, most time-consuming functions in staffing. Built on Claude (Anthropic's API), these agents integrate with every major ATS (Bullhorn, JobAdder, Lever, Greenhouse) and the broader staffing tech stack.
+This open-source suite provides **10 AI-powered agents built with Claude Code** — the primary tool in the UAIS stack — that automate the highest-impact, most time-consuming functions in staffing. Agents connect directly to ATS APIs (Bullhorn, JobAdder, Lever, Greenhouse) with no middleware, run autonomously via **OpenClaw** (the Operations Hub), and use **n8n** for scheduling, cron jobs, and monitoring dashboards.
 
 ### What This Solves
 
@@ -55,11 +55,15 @@ This open-source suite provides **10 AI-powered agents** orchestrated through **
 
 ### Architecture Principles
 
-1. **ATS-Agnostic** — Works with any ATS via adapter pattern; ships with Bullhorn, Lever, Greenhouse, JobAdder adapters
-2. **Cost-Optimized** — Uses Claude Haiku for high-volume tasks, Sonnet for complex reasoning, Batch API where latency isn't critical
-3. **Self-Hosted First** — n8n self-hosted as the workflow engine; no vendor lock-in
-4. **Modular** — Deploy one agent or all ten; each works independently
-5. **Privacy-Conscious** — Candidate PII stays in your infrastructure; Claude API calls use ephemeral processing
+1. **Claude Code is PRIMARY** — The AI Integrator's main tool. Builds custom agents, direct API integrations, complex reasoning. This is what makes UAIS different from every "n8n automation agency."
+2. **ATS APIs as CONNECTORS** — Works with any ATS via direct Claude Code integration; ships with Bullhorn, Lever, Greenhouse, JobAdder adapters — no middleware
+3. **OpenClaw as AUTONOMOUS LAYER** — The Operations Hub that runs 24/7 on dedicated cloud infrastructure. The AI that never sleeps.
+4. **n8n as ORCHESTRATION (secondary)** — Scheduling, cron jobs, webhook triggers, visual monitoring dashboards. Self-hosted; no vendor lock-in. Not the main event.
+5. **Cost-Optimized** — Uses Claude Haiku for high-volume tasks, Sonnet for complex reasoning, Batch API where latency isn't critical
+6. **Modular** — Deploy one agent or all ten; each works independently
+7. **Privacy-Conscious** — Candidate PII stays in your infrastructure; Claude API calls use ephemeral processing
+
+> **The key insight:** Training someone on n8n is a weekend course. Training someone to build Claude Code agents for staffing workflows is a real certification with real value. The stack is: **Claude Code** (builds it) + **OpenClaw** (runs it) + **n8n** (schedules it) + **ATS APIs** (connects it).
 
 ---
 
@@ -310,11 +314,11 @@ The README should include:
 # 🏢 Staffing AI Automation Suite
 
 > 10 AI agents that automate 80% of staffing agency operations.
-> Built with Claude (Anthropic), n8n, and open-source tools.
+> Built with Claude Code (primary), OpenClaw (autonomous ops), n8n (orchestration), and direct ATS API connections.
 
 [![License: MIT](badge)](LICENSE)
+[![Claude Code](badge)](https://docs.anthropic.com)
 [![n8n](badge)](https://n8n.io)
-[![Claude API](badge)](https://docs.anthropic.com)
 
 ## What This Does
 
@@ -377,7 +381,7 @@ See [Cost Analysis](docs/cost-optimization.md) for detailed breakdown.
 │  └────────────────────────┬─────────────────────────────────────┘   │
 │                           │                                         │
 │  ┌────────────────────────▼─────────────────────────────────────┐   │
-│  │                   n8n WORKFLOW ENGINE                         │   │
+│  │            CLAUDE CODE AGENTS + n8n ORCHESTRATION              │   │
 │  │                                                               │   │
 │  │  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐           │   │
 │  │  │ Resume  │ │ Source  │ │ Outreach│ │Schedule │           │   │
@@ -1877,7 +1881,9 @@ is useful.
 
 ---
 
-## 5. n8n Workflow Designs
+## 5. n8n Orchestration Designs (Scheduling, Triggers, Monitoring)
+
+> **Note:** n8n serves as the orchestration layer — scheduling, cron jobs, webhook triggers, and visual monitoring dashboards. The agents themselves are built with Claude Code and connect directly to ATS APIs. n8n coordinates when and how often agents run, not what they do.
 
 ### 5.1 Workflow Inventory
 
@@ -2636,7 +2642,7 @@ pg_dump -h postgres -U ${POSTGRES_USER} ${POSTGRES_DB} | gzip > /backups/staffin
 | Component | Service | Monthly Cost | Notes |
 |-----------|---------|-------------|-------|
 | **AI Processing** | Claude API (Haiku + Sonnet mix) | $25–$75 | 90% Haiku, 10% Sonnet. Batch API for non-urgent. |
-| **Workflow Engine** | n8n Self-Hosted | $10–$20 | VPS hosting cost only |
+| **Orchestration** | n8n Self-Hosted (scheduling, cron, monitoring) | $10–$20 | VPS hosting cost only |
 | **Database** | PostgreSQL (on same VPS) | $0 | Included in VPS |
 | **Caching** | Redis (on same VPS) | $0 | Included in VPS |
 | **Dashboards** | Metabase (on same VPS) | $0 | Open-source, self-hosted |

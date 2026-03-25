@@ -90,12 +90,12 @@ These tools solve a single problem within the recruiting workflow. They require 
 
 ## Adjacent Competitors
 
-### General AI Automation Agencies
+### General AI Automation Agencies (The "n8n Agencies")
 
 - **Typical engagement:** $2K-$8K/month retainer
-- **What they do:** Build AI automations for businesses across all industries using tools like n8n, Make, Zapier, and custom LLM integrations.
-- **Critical gap:** They do not know staffing workflows, KPIs (fill rate, time-to-fill, gross margin per placement, submittal-to-interview ratio), ATS system architectures, VMS platforms, or the candidate-client-recruiter relationship triangle.
-- **UAIS advantage:** Deep staffing domain expertise means faster time-to-value, fewer failed implementations, and automations that align with how agencies actually operate.
+- **What they do:** Build visual workflow automations for businesses across all industries using tools like n8n, Make, Zapier, and basic LLM integrations. Training someone on n8n is a weekend course — their offering is easily replicated.
+- **Critical gap:** They do not know staffing workflows, KPIs (fill rate, time-to-fill, gross margin per placement, submittal-to-interview ratio), ATS system architectures, VMS platforms, or the candidate-client-recruiter relationship triangle. Their automations are drag-and-drop workflows, not custom AI agents with complex reasoning.
+- **UAIS advantage:** UAIS builds with **Claude Code** as the primary tool — custom agents with direct API integrations and complex reasoning capabilities that no drag-and-drop workflow builder can replicate. Deep staffing domain expertise means faster time-to-value, fewer failed implementations, and automations that align with how agencies actually operate. Training someone to build Claude Code agents for staffing workflows is a real certification with real value.
 
 ### Big 4 and Management Consulting (EY, IBM, McKinsey, Deloitte)
 
@@ -198,7 +198,7 @@ Nearly all existing AI recruiting tools focus on the candidate side of the equat
 | Project | Maturity | Relevance |
 |---|---|---|
 | **OpenCATS** | Most mature open-source ATS; active community but limited AI capabilities | Potential base layer for agencies seeking zero-cost ATS, but requires significant customization |
-| **n8n** | 8,925+ community workflow templates; 6,099 tagged as AI-focused; HR/recruiting templates available | Powerful automation backbone. UAIS integrators can leverage n8n as infrastructure for custom workflows. |
+| **n8n** | 8,925+ community workflow templates; 6,099 tagged as AI-focused; HR/recruiting templates available | Orchestration layer for scheduling, cron jobs, and monitoring. UAIS uses n8n as secondary infrastructure — Claude Code is the primary tool for building custom agents and direct ATS integrations. |
 | **LangChain / LlamaIndex** | Leading open-source LLM orchestration frameworks | Building blocks for custom AI agents. Not staffing-specific out of the box. |
 
 ### What Does NOT Exist in Open Source
@@ -214,7 +214,7 @@ There is no complete, staffing-agency-in-a-box automation suite available as ope
 
 ### UAIS Open-Source Opportunity
 
-Create and publish staffing-specific workflow templates (n8n, Make, or framework-agnostic) as a lead generation engine:
+Create and publish staffing-specific Claude Code agent templates and n8n orchestration workflows as a lead generation engine:
 - Build credibility in the staffing AI community
 - Demonstrate domain expertise through functional, real-world templates
 - Convert template users into full-service UAIS clients when they hit complexity limits
@@ -256,10 +256,10 @@ UAIS is approximately 10x cheaper than enterprise platforms and includes hands-o
 UAIS integrators understand staffing KPIs (fill rate, time-to-fill, gross margin, submittal-to-interview ratio), ATS system architectures (Bullhorn, Crelate, JobAdder), VMS platforms, compliance requirements, and the candidate-client-recruiter relationship model. General AI agencies do not.
 
 ### 3. Embedded Model
-UAIS does not deliver a report and walk away. It does not sell a software license and leave the agency to figure out implementation. An actual person is embedded within the agency's operations, building automations, training staff, and iterating based on real-world results.
+UAIS does not deliver a report and walk away. It does not sell a software license and leave the agency to figure out implementation. An actual person is embedded within the agency's operations, building Claude Code agents, connecting directly to ATS APIs, training staff, and iterating based on real-world results.
 
-### 4. Custom-Built Workflows
-Every automation is built around each agency's actual processes -- their specific ATS configuration, their candidate communication style, their client reporting requirements, their niche-specific workflows. This is the opposite of pre-built features that force agencies to change how they work.
+### 4. Claude Code-Built Custom Agents
+Every automation is built using Claude Code around each agency's actual processes — custom agents with direct ATS API integration, complex reasoning, and deep staffing intelligence. Their specific ATS configuration, their candidate communication style, their client reporting requirements, their niche-specific workflows. This is the opposite of pre-built features or drag-and-drop n8n workflows that force agencies to change how they work.
 
 ### 5. Risk Elimination
 The 30-day double-or-nothing guarantee removes all adoption risk for the agency. If UAIS does not deliver measurable impact within 30 days, the agency gets double its money back. No enterprise platform, SaaS tool, or consulting firm offers comparable risk reversal.
@@ -275,13 +275,15 @@ By publishing free staffing automation templates and building in public, UAIS es
 
 2. **The 5-50 recruiter segment is underserved.** Too small for enterprise, too specialized for generic automation, too busy to DIY. This is a large addressable market with no purpose-built solution.
 
-3. **Domain expertise is the moat.** General AI agencies can technically build automations, but they waste time and money learning staffing operations. UAIS starts where they would finish.
+3. **Claude Code expertise is the moat.** General AI agencies build drag-and-drop n8n workflows — a weekend skill. UAIS builds Claude Code agents with complex reasoning, direct ATS API integrations, and deep staffing domain knowledge. That combination is a real certification with real value, not something competitors can replicate with a YouTube tutorial.
 
 4. **Compliance is an emerging differentiator.** EU AI Act enforcement in August 2026 creates urgency for agencies with international operations or clients. Early positioning on AI compliance in recruiting is a strategic advantage.
 
 5. **The pricing math works in UAIS's favor.** At $4,600/year, UAIS is cheaper than most individual tool subscriptions while delivering cross-functional value that no single tool can match.
 
-6. **No pivot required from competitors.** Enterprise platforms will not move downmarket. SaaS tools will not add embedded services. Consulting firms will not drop their rates. The UAIS model is structurally difficult for existing players to replicate.
+6. **The tech stack is the moat.** Claude Code expertise — building custom agents with direct ATS API integrations and complex reasoning — is not something n8n automation agencies can replicate. Training someone on n8n is a weekend course. Training someone to build Claude Code agents for staffing workflows is a real certification with real value.
+
+7. **No pivot required from competitors.** Enterprise platforms will not move downmarket. SaaS tools will not add embedded services. Consulting firms will not drop their rates. The UAIS model is structurally difficult for existing players to replicate.
 
 ---
 

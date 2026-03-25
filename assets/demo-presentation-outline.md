@@ -24,44 +24,48 @@ A 15-minute live demo showing staffing agency owners exactly what an AI Integrat
 
 ### The Demo (8 min)
 
-**Slide 3: Resume Screening Agent — LIVE DEMO**
-- Show a stack of 50 resumes being processed in real-time.
-- Claude Code agent scores each candidate against job requirements.
-- Output: ranked shortlist with match scores and reasoning for each score.
-- Talking point: "This took your recruiter 6 hours. It just took 45 seconds."
+**Slide 3: Resume Screening Agent — LIVE CLAUDE CODE SESSION**
+- Open a live Claude Code session on screen. This is the demo — not an n8n workflow builder.
+- Show Claude Code agent processing a stack of 50 resumes in real-time against job requirements.
+- Show the direct ATS API connection — no middleware, no drag-and-drop. Real code, real intelligence.
+- Output: ranked shortlist with match scores and reasoning for each score, pushed directly to ATS.
+- Talking point: "This took your recruiter 6 hours. It just took 45 seconds. And it's connected directly to your Bullhorn — no middleware."
 - Show the reasoning output so they see it is not a black box.
 
-**Slide 4: Candidate Sourcing Pipeline — LIVE DEMO**
-- Show multi-source search running simultaneously (LinkedIn, GitHub, job boards).
-- AI enriches profiles with skills, experience, and contact information.
-- AI scores relevance against the open role.
+**Slide 4: Candidate Sourcing Pipeline — LIVE CLAUDE CODE SESSION**
+- Show Claude Code building and running a multi-source search simultaneously (LinkedIn, GitHub, job boards).
+- Claude Code enriches profiles with skills, experience, and contact information via direct API calls.
+- AI scores relevance against the open role with complex reasoning — not keyword matching.
 - Output: 25 qualified candidates with contact info, ready for outreach.
-- Talking point: "Your recruiter found 3 candidates in a day. AI found 25 in 10 minutes."
+- Talking point: "Your recruiter found 3 candidates in a day. Claude Code found 25 in 10 minutes. This isn't a drag-and-drop workflow — this is AI that thinks."
 - Emphasize quality: show the match reasoning, not just the count.
 
-**Slide 5: Cold Outreach Personalization — LIVE DEMO**
-- Show AI researching a prospect company in real-time.
-- AI pulls recent job postings, company news, leadership changes, and funding rounds.
-- AI crafts a personalized email referencing specific details.
+**Slide 5: Cold Outreach Personalization — LIVE CLAUDE CODE SESSION**
+- Show Claude Code researching a prospect company in real-time.
+- Claude Code pulls recent job postings, company news, leadership changes, and funding rounds.
+- Claude Code crafts a personalized email referencing specific details.
 - Talking point: "This is the email that got you on this call. Same system, pointed at your prospects."
 - Show 2-3 variations so they see it is not a template.
 
-**Slide 6: The Operations Hub (Tier 2+ Only)**
+**Slide 6: The Operations Hub — OpenClaw (Tier 2+ Only)**
+- Show the OpenClaw autonomous layer: "This runs 24/7 on its own. The AI that never sleeps."
 - Show the Slack or SMS interface: type "Follow up with every candidate who hasn't responded in 3 days" and watch it execute.
 - Show the daily briefing: a prioritized task list generated for each recruiter every morning.
 - Show credential monitoring: automatic expiration alerts, renewal tracking, compliance dashboards.
-- Talking point: "Your operations manager's entire morning routine, handled before they open their laptop."
+- Show n8n monitoring dashboard: visual overview of all scheduled jobs, execution logs, system health.
+- Talking point: "Claude Code builds it. OpenClaw runs it. n8n schedules it. Your ATS connects it. That's the stack."
 
 ---
 
 ### The Offer (3 min)
 
 **Slide 7: What You Get**
-- Certified AI Integrator matched to your specific agency type.
+- Certified AI Integrator matched to your specific agency type — trained on Claude Code, not just drag-and-drop workflows.
 - 30-day bootcamp building these exact systems around YOUR workflows.
-- Custom AI workflows integrated with YOUR ATS, YOUR processes, YOUR team.
+- Custom Claude Code agents integrated directly with YOUR ATS APIs, YOUR processes, YOUR team — no middleware.
+- OpenClaw Operations Hub running 24/7 on dedicated cloud infrastructure (Tier 2+).
 - Results: 30-40 hours per week saved, 2x placements per recruiter.
-- Not a software subscription. A trained person who builds this inside your agency.
+- Not a software subscription. Not an "n8n agency." A trained person who builds Claude Code agents inside your agency.
 
 **Slide 8: The Investment**
 - $1,000 to start + $300/month.
@@ -91,10 +95,12 @@ A 15-minute live demo showing staffing agency owners exactly what an AI Integrat
 
 | Requirement | Details |
 |-------------|---------|
-| Live Claude Code session | Resume screening agent running against real (anonymized) resume data |
-| Pre-built sourcing pipeline | Candidate sourcing with real output from multiple sources |
-| Cold email generation | Personalized outreach generated live during the call |
-| Operations Hub interface | Slack channel or web dashboard showing the daily briefing and task automation |
+| Live Claude Code session | **PRIMARY DEMO** — Resume screening agent running against real (anonymized) resume data. Show the Claude Code environment, not an n8n canvas. |
+| Direct ATS API demo | Show Claude Code connecting directly to a Bullhorn/Lever sandbox — no middleware layer |
+| Pre-built sourcing pipeline | Claude Code-built candidate sourcing with real output from multiple sources |
+| Cold email generation | Claude Code generating personalized outreach live during the call |
+| OpenClaw Operations Hub | Slack channel or web dashboard showing the autonomous 24/7 operations layer |
+| n8n monitoring dashboard | Visual overview of scheduled jobs and orchestration — positioned as supporting infrastructure, not the main event |
 | Case study metrics | Before/after numbers from completed engagements |
 | Backup recordings | Pre-recorded demos in case of technical issues during the live call |
 
