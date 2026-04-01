@@ -5,6 +5,14 @@ offer-packages/
 financial-model/
 docs/research/REVIEW-*.md
 
+# Private podcast and software factory docs
+docs/podcast/guest-strategy.md
+docs/podcast/content-multiplication.md
+docs/podcast/funnel-integration.md
+docs/software-factory/onboarding-workflow.md
+docs/software-factory/tier-mapping.md
+docs/software-factory/podcast-integration.md
+
 # OS files
 .DS_Store
 Thumbs.db

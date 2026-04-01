@@ -86,6 +86,8 @@ UAIS-Staffing-AI-Vertical/
 |   |-- research/               # Industry research, problem maps, complete guides
 |   |-- playbooks/              # Implementation playbooks by agency type
 |   |-- gtm/                    # Go-to-market strategy for the staffing vertical
+|   |-- podcast/                # The Recruiter's Edge — show concept, episodes, distribution
+|   |-- software-factory/       # Software Factory for Recruiters — product, architecture, agents
 |
 |-- solutions/
 |   |-- by-agency-type/         # Custom solutions per business model (17 types)
@@ -221,6 +223,47 @@ This guarantee is built into every tier. We measure productivity against agreed-
 4. **Package the offer** -- Customize the tier structure from `offer-packages/` based on your target client
 5. **Go to market** -- Execute the GTM strategy in `docs/gtm/` to land your first client
 6. **Deploy and deliver** -- Use the automation blueprints in `solutions/automation-blueprints/` and n8n workflows in `solutions/n8n-workflows/` to set up the AI agents
+
+---
+
+## The Recruiter's Edge Podcast
+
+> **"The industry says recruiting is dying. We say it's about to have its greatest era."**
+
+The Recruiter's Edge is a podcast hosted by Justin Bell — 10+ years in staffing, 1,000+ people trained — bridging the gap between AI capability and recruiting reality. Every episode tackles a real problem staffing agencies face and shows exactly how AI solves it.
+
+- **Season 1:** 12 episodes covering resume screening, compliance, business development, no-shows, executive search, RPO margins, and more
+- **Format:** Interview episodes (35-45 min) with agency owners + solo deep dives (20-30 min) on specific problems
+- **No pitch. No hype. Just the playbook the industry needs.**
+
+| Document | Description |
+|----------|-------------|
+| [Show Concept](docs/podcast/show-concept.md) | Mission, host bio, positioning, voice rules |
+| [Season 1 Lineup](docs/podcast/season-1-lineup.md) | 12 episodes with themes, guests, takeaways |
+| [Episode Format](docs/podcast/episode-format.md) | Interview + solo structures, recurring segments |
+| [Distribution Strategy](docs/podcast/distribution-strategy.md) | Channels, LinkedIn strategy, content multiplication |
+
+---
+
+## The Software Factory for Recruiters
+
+The actual product agencies receive: a **Claude Code-powered automation system** pre-configured for staffing and recruiting operations.
+
+Not a SaaS product. Not a generic tool. A **custom-built factory** that produces, runs, and improves your automation continuously — configured for YOUR ATS, YOUR workflows, YOUR pain points.
+
+- **10 purpose-built AI agents** for staffing operations
+- **Direct ATS integration** (Bullhorn, Lever, Greenhouse, JobAdder, and more)
+- **24/7 autonomous operation** via OpenClaw Operations Hub
+- **Each deployment makes the next one better** — network effects compound
+
+| Document | Description |
+|----------|-------------|
+| [Product Definition](docs/software-factory/product-definition.md) | What it is, what it's not, the factory metaphor |
+| [Architecture](docs/software-factory/architecture.md) | Five-layer technical architecture |
+| [Agent Specifications](docs/software-factory/agent-specifications.md) | All 10 agents with inputs, outputs, costs |
+| [Factory Learning Model](docs/software-factory/factory-learning-model.md) | How each deployment improves the next |
+| [Competitive Differentiation](docs/software-factory/competitive-differentiation.md) | Why this wins vs. enterprise AI, n8n agencies, ATS AI |
+| [Roadmap](docs/software-factory/roadmap.md) | What's built, what's next, timeline |
 
 ---
 
